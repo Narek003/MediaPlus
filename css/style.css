@@ -1,0 +1,458 @@
+ul, ol, dl {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none !important;
+}
+/* connect start */
+.connect {
+    border-bottom: 1px solid #eee;
+}
+.connect .container > .row {
+    height: 60px;
+}
+.connect .container ul {
+    column-gap: 25px;
+    white-space: nowrap;
+}
+.connect a {
+    color: #000;
+    transition: all .4s;
+}
+.connect a:hover {
+    color: #007bff;
+}
+.connect i {
+    color: #007bff;
+    margin-right: 15px;
+}
+/* connect end */
+
+/* navbar start */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+}
+nav .container .row > div > ul {
+    column-gap: 45px;
+    white-space: nowrap;
+}
+nav .container .row {
+    height: 80px;
+}
+nav a {
+    color: #000;
+    transition: all .4s;
+}
+nav .container .row > .list > ul > li> a {
+    line-height: 78px;
+}
+nav a:hover {
+    color: #007bff;
+}
+nav .container .row > .list > ul > li {
+    position: relative;
+}
+nav .container .row > .list > ul > li > a::after{
+    content: "";
+    display: block;
+    background-color: #007bff;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: all .5s;
+}
+nav .container .row > .list > ul > li:hover > a::after{
+    transform: scaleX(1);
+}
+nav .container .row > .list > ul > li > ul {
+    background-color: #fff;
+    border-left: 3px solid #007bff;
+    position: absolute;
+    width: 170px;
+    transform: scaleY(0);
+    transform-origin: center top;
+    box-shadow: 4px 8px 15px rgba(238, 238, 238, 0.685);
+    transition: all .5s;
+}
+nav .container .row > .list > ul > li:hover > ul {
+    transform: scaleY(1);
+}
+nav .container .row > .list > ul > li > ul > li {
+    padding: 15px 0 15px 5px;
+    border-bottom: 1px dashed #000;
+    transition: all .4s;
+}
+nav .container .row > .list > ul > li > ul > li:last-of-type{
+    border-bottom: none;
+}
+nav .container .row > .list > ul > li > ul > li:hover {
+    background-color: #eee;
+}
+nav .container .row > .list > ul > li > ul > li:hover > a{
+    color: #007bff;
+}
+nav .container .row > .button > a {
+    position: relative;
+    padding: 15px 25px;
+    background-color: #007bff;
+    border-radius: 5px;
+    color: #fff;
+    z-index: 0;
+}
+nav .container .row > .button > a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 5px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+nav .container .row > .button > a:hover::before {
+    transform: scaleX(1);
+}
+nav .container .bar > ul {
+    background-color: #fff;
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: center top;
+    box-shadow: 4px 8px 15px #eee;
+    width: 200px;
+    left: -1050%;
+    top: 120%;
+    transition: all .5s;
+}
+nav .container .bar > a:focus + ul{
+    transform: scaleY(1);
+}
+nav .container .bar > ul > li {
+    position: relative;
+}
+nav .container .bar > ul > li > ul {
+    background-color: #fff;
+    position: absolute;
+    box-shadow: 4px 8px 15px #eee;
+    left: 100%;
+    transform: scaleX(0);
+    transform-origin: left center;
+    top: 0;
+    transition: all .5s;
+}
+nav .container .bar > ul > li > a:focus + ul {
+    transform: scaleX(1);
+}
+/* navbar end */
+/* headerbar start */
+header {
+    background-image: url(../images/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 285px;
+    background-color: #007bffab;
+}
+header .container {
+    position: relative;
+    height: 285px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    row-gap: 13px;
+}
+header .container div {
+    column-gap: 10px;
+} 
+header .container div > a {
+    color: #fff;
+    transition: all .4s;
+}
+header .container div > a:hover {
+    color: #000;
+}
+/* headerbar end */
+/* sectionbar start */
+section .container {
+    padding: 120px 0;
+}
+section .container > .row article .item-in {
+    box-shadow: 4px 9px 18px rgba(119, 119, 119, 0.527);
+}
+section .container > .row article .item-in::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #007bff;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: all .5s;
+}
+section .container > .row article .item-in:hover::after{
+    transform: scaleX(1);
+}
+section .container > .row article .item {
+    padding: 15px;
+}
+section .container > .row article .item .info-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 25px ;
+}
+section .container > .row article .item .info-item span {
+    background-color: #007bff;
+    text-align: center;
+    padding: 8px 0;
+    color: #fff;
+    border-radius: 8px;
+    width: 150px;
+}
+section .container > .row article .item .info-item a {
+    font-size: 20px;
+    color: #000;
+    transition: all .8s;
+}
+section .container > .row article .item .info-item a:hover {
+    color: #007bff;
+}
+section .container > .row article .item .info-item p {
+    color: rgb(99, 99, 99);
+}
+section .container aside > div{
+    box-shadow: 4px 8px 50px #eee;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+section .container aside .form{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section .container aside .form input{
+    border-radius: 5px 0 0 5px;
+    height: 50px;
+}
+section .container aside .form button {
+    cursor: pointer;
+    width: 50px;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    background-color: #000;
+    border: none;
+}
+section .container aside .blog-categories {
+    font-size: 15px;
+    padding: 60px;
+}
+section .container aside .blog-categories h3,
+section .container aside .recent-post h3,
+section .container aside .tags h3{
+    position: relative;
+}
+section .container aside .blog-categories h3::before,
+section .container aside .recent-post h3::before,
+section .container aside .tags h3::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background-color: #007bff;
+    transform: translateX(-6px);
+}
+section .container aside .blog-categories ul {
+    margin: 10px 0;
+}
+section .container aside .blog-categories ul li {
+    padding: 10px 0;
+    transition: all .5s;
+}
+section .container aside .blog-categories ul li:hover {
+    transform: translateX(6px);
+}
+section .container aside .blog-categories ul a {
+    color: #000;
+    transition: all .5s;
+}
+section .container aside .blog-categories ul li:hover > a{
+    color: #007bff;
+}
+section .container aside .recent-post {
+    padding: 50px;
+}
+section .container aside .recent-post .grid {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+section .container aside .recent-post .grid .grid-item {
+    padding: 20px 0;
+}
+section .container aside .recent-post .grid .grid-item-2 {
+    border-bottom: 2px solid #eee;
+    border-top: 2px solid #eee;
+}
+section .container aside .recent-post .grid .grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .container aside .recent-post .grid .grid-item .grid-image {
+    flex-basis: 40%;
+}
+section .container aside .recent-post .grid .grid-item .grid-info {
+    flex-basis: 50%;
+}
+section .container aside .recent-post .grid .grid-item .grid-info a {
+    color: #000;
+    transition: all .5s;
+}
+section .container aside .recent-post .grid .grid-item .grid-info a:hover {
+    color: #007bff;
+}
+section .container aside .recent-post .grid .grid-item .grid-info p {
+    color: rgb(114, 114, 114);
+}
+section .container aside .tags {
+    padding: 50px;
+}
+section .container aside .tags .tags-a {
+    margin: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+section .container aside .tags .tags-a a{
+    padding: 5px 10px;
+    background-color: rgb(221, 212, 212);
+    color: #000;
+    border-radius: 5px;
+    transition: all .5s;
+}
+section .container aside .tags .tags-a a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+/* sectionbar end */
+/* footerbar start */
+footer {
+    background: #1A76D1;
+}
+footer .container .row > div,
+footer a {
+    color: #fff;
+}
+footer .container .row > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 42px;
+}
+
+footer .container .row {
+    padding: 50px 0;
+    row-gap: 30px;
+}
+footer .container .row > div > h3:after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 5px;
+    background-color: #fff;
+    transform: translateY(20px);
+}
+footer .container .row > div .icons > a {
+    padding: 10px 12px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition: all .4s;
+}
+footer .container .row > div .icons > a:hover {
+    background-color: #fff;
+    color: #1A76D1;
+}
+footer .container .row .footer-list > ul > li {
+    padding: 10px 0;
+    transition: all .4s;
+} 
+footer .container .row .footer-list > ul > li:hover {
+    transform: translateX(10px);
+} 
+footer .container .row .footer-list > ul > li:hover > a {
+    color: #fff;
+}
+footer .container .row .footer-list > ul:nth-of-type(2) {
+    margin-left: 30px;
+}
+footer .container .row .calendar li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+footer .container .row > div input {
+    height: 50px;
+    background-color: #1A76D1;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px 0 0 5px;
+}
+footer .container .row > div button {
+    cursor: pointer;
+    width: 50px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 0 5px 5px 0;
+    color: #1A76D1;
+    transition: all .4s;
+}
+footer .container .row > div button:hover {
+    color: #000;
+}
+.footer-down {
+    background-color: #007bff;
+}
+.footer-down .container {
+    text-align: center;
+    padding: 30px 0;
+    color: #fff;
+}
+.footer-down .container a {
+    color: #fff;
+    text-decoration: underline !important;
+    transition: all .5s;
+}
+.footer-down .container a:hover {
+    opacity: .7;
+}
+/* footerbar end */
+/* fixed start */
+.fixed {
+    position: fixed;
+    width: 210px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    bottom: 15px;
+    left: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 4px 8px 15px rgba(100, 100, 100, 0.685);
+}
